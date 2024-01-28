@@ -1,0 +1,50 @@
+<body>
+
+
+
+    <div class="container pt-5">
+        
+        <div class="row mt-5 pt-5 gx-0">
+            <div class="col-md-6">
+                <img class="w-100" src="../../assets/imgs/gaming.ebaf2ffc84f4451d.jpg" alt="">
+            </div>
+            <div class="col-md-6 bg-form">
+                <form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="row g-3 px-3">
+
+                    <div class="d-flex pt-3">
+                        <img class="w-25 mx-auto" src="../../assets/imgs/logo.png" alt="">
+                    </div>
+                     
+                    <h3 class="text-center text-muted">Log in to GameOver!</h3>
+                    
+                    <div class="col-12">
+                        <input type="text" class="form-control" formControlName="email" placeholder="Email Adrres">
+                        <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched">
+                            <p  *ngIf="loginForm.get('email')?.getError('required')" class="text-danger"> input is required</p>
+                            <p  *ngIf="loginForm.get('email')?.getError('email')" class="text-danger"> please enter valid emial</p>
+                            
+                           </div>
+                    </div>
+                  
+                    <div class="col-md-12">
+                        <input type="password" class="form-control" formControlName="password" placeholder="password">
+                        <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">
+                            <p  *ngIf="loginForm.get('password')?.getError('required')" class="text-danger"> input is required</p>
+                            <p  *ngIf="loginForm.get('password')?.getError('pattern')" class="text-danger"> password starts with letter then 3 numbers</p>
+                           </div> 
+                    </div>
+                    <div class="col-12">
+                        <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary text-white w-100 py-2 ">Login</button>
+                        <p id="nott"></p>
+                    </div>
+
+                    <div class="break mt-3"></div>
+
+                    <span class="text-center pb-3">Not a member yet? <span routerLink="/register" class="text-primary carsor">creat account!</span></span>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>

@@ -1,0 +1,14 @@
+body
+{
+    background-color: #272B30;
+}
+
+.card
+{
+    border: none;
+}
+
+img
+{
+    cursor: pointer;
+}

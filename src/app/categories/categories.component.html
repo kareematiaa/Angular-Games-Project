@@ -1,0 +1,26 @@
+<body>
+    
+    <div class="container">
+        <div class="row gy-3 py-5">
+            <div class="col-md-3" *ngFor="let game of gamesList">
+    
+                <div class="card" style="width: 20rem;">
+                    <img [src]="game.thumbnail" [routerLink]="['/gamedetails',game.id]" class="card-img-top" alt="...">
+                    <div class="card-body bg-dark text-muted">
+                        
+                        <h4 class="card-title">{{game.title}} </h4>
+                        <small class="fs-6 rounded bg-primary p-1 text-white fw-bold">FREE</small>
+                        <div class="d-flex justify-content-between pt-3">
+                            <p class="card-text"> <i class="fa-solid fa-square-plus"></i></p>
+                            <span class="">{{game.genre}}</span>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+    </div>
+    
+    </body>

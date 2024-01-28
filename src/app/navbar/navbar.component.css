@@ -1,0 +1,31 @@
+nav {
+    background-color: #272b30 !important;
+    border-bottom: 1px solid rgba(28, 28, 28, .6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+
+}
+
+small {
+    font-family: 'Xanh Mono', monospace;
+}
+
+img {
+    width: 70px;
+    filter: drop-shadow(1px 1px 3px #1983e6ce);
+}
+
+.btn-outline-ftg {
+    color: #4799eb;
+    border-color: #4799eb;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+a {
+    cursor: pointer;
+}
+
+.text-muted
+{
+    color: rgba(255, 255, 255, 0.996);
+}
